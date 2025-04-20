@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/* ===== CDN styles ===== */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css');
+@import url('https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.css');
+@import url('https://cdn.datatables.net/searchbuilder/1.7.0/css/searchBuilder.bootstrap5.css');
+@import url('https://cdn.datatables.net/buttons/3.0.0/css/buttons.bootstrap5.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@docsearch/css@3');
 
 /* === bootstrap.min.css personalizado === */
 /*!
