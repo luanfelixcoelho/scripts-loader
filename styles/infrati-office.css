@@ -41,6 +41,8 @@ main > .container {
     color: white;
 }
 
-.dt-orderable-asc dt-orderable-desc dt-ordering-asc th {
+table.dataTable thead > tr > th.dt-orderable-asc, table.dataTable thead > tr > th.dt-orderable-desc,
+table.dataTable thead > tr > td.dt-orderable-asc,
+table.dataTable thead > tr > td.dt-orderable-desc {
   background-color: #dddddd;
 }
