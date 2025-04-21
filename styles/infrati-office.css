@@ -40,3 +40,7 @@ main > .container {
     background-color: #c90347;
     color: white;
 }
+
+table.dataTable th {
+  background-color: #dddddd;
+}
