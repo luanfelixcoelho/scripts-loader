@@ -17,7 +17,6 @@ const scripts = [
   'https://cdn.datatables.net/buttons/3.0.0/js/buttons.print.min.js'
 ];
 
-// Carrega os scripts em sequência
 function loadScriptsInOrder(scripts, callback) {
   let index = 0;
 
@@ -43,9 +42,9 @@ function loadScriptsInOrder(scripts, callback) {
 }
 
 loadScriptsInOrder(scripts, function () {
-  // Aqui o DataTable estará disponível
-  document.addEventListener("DOMContentLoaded", function () {
-    new DataTable('#users', {
+  // Inicializa DataTable com jQuery
+  $(document).ready(function () {
+    $('#users').DataTable({
       layout: {
         top1: 'searchBuilder',
         top1Start: {
@@ -54,12 +53,14 @@ loadScriptsInOrder(scripts, function () {
               extend: 'copy',
               text: 'Copiar',
               className: 'btn btn-secondary',
-              exportOptions: { modifier: { page: 'current' } }
+              exportOptions: {
+                modifier: { page: 'current' }
+              }
             },
             { extend: 'pdf', text: 'PDF', className: 'btn btn-secondary' },
             { extend: 'excel', text: 'Excel', className: 'btn btn-secondary' },
-            { extend: 'print', text: 'imprimir', className: 'btn btn-secondary' }
-          ],
+            { extend: 'print', text: 'Imprimir', className: 'btn btn-secondary' }
+          ]
         },
         topEnd: {
           search: { placeholder: 'Digite a busca aqui' }
@@ -78,15 +79,15 @@ loadScriptsInOrder(scripts, function () {
           condition: 'Comparador',
           clearAll: 'Limpar Tudo',
           search: 'Buscar',
-          conditions: { /* ... seu bloco completo aqui ... */ },
+          conditions: { /* ... */ },
           logicAnd: 'E',
           logicOr: 'OU',
           value: 'Valor',
-          title: { 0: 'Filtros', _: 'Filtros (%d)' },
+          title: { 0: 'Filtros', _: 'Filtros (%d)' }
         },
         buttons: {
           copyTitle: 'Dados copiados',
-          copyKeys: 'Ctrl ou ⌘ + C para copiar',
+          copyKeys: 'Use Ctrl ou ⌘ + C para copiar',
           copySuccess: { _: '%d linhas copiadas', 1: '1 linha copiada' }
         },
         search: "Buscar",
